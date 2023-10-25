@@ -2,10 +2,15 @@
 
 import { Title } from "./(sections)/Title";
 
+import { Navigation } from "@/components/Navigation";
+
 export default function Home() {
   return (
-    <main>
-      <Title />
-    </main>
+    <>
+      <Navigation />
+      <main>
+        <Title />
+      </main>
+    </>
   );
 }
