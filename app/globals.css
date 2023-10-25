@@ -9,6 +9,11 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-blue: 5 184 185;
+    --color-pink: 252 92 183;
+    --color-gray: 245 245 245;
+  }
   h1 {
     @apply font-trailers;
     line-height: 0.75;

@@ -14,9 +14,9 @@ const config: Config = {
         md: "800px",
       },
       colors: {
-        blue: "#05B8B9",
-        pink: "#FC5CB7",
-        gray: "#F5F5F5",
+        blue: "rgb(var(--color-blue) / <alpha-value>)",
+        pink: "rgb(var(--color-pink) / <alpha-value>)",
+        gray: "rgb(var(--color-gray) / <alpha-value>)",
       },
       fontFamily: {
         trailers: ["TT Trailers, sans-serif"],
