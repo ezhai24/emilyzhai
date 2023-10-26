@@ -27,6 +27,9 @@ const config: Config = {
         "5": "5 5 0%",
         "9": "9 9 0%",
       },
+      spacing: {
+        "100": "28rem",
+      },
     },
   },
   plugins: [],

@@ -3,17 +3,25 @@ import { MotionProps, motion } from "framer-motion";
 interface Props extends MotionProps {
   fill?: string;
   stroke?: string;
+  clipX?: [start: number, end: number];
   className?: string;
 }
 export const Drip = (props: Props) => {
-  const { fill, stroke, className, ...motionProps } = props;
+  const { fill, stroke, clipX, className, ...motionProps } = props;
+  const [clipXStart, clipXEnd] = clipX || [0, 0];
+
+  const width = clipX ? clipXEnd - clipXStart : 142.28186;
+  const height = 50.852077;
+
+  const clipXOffset = clipX ? clipXStart : 0;
+  const clipYOffset = 0;
 
   return (
     <motion.svg
       {...motionProps}
-      width="142.28186mm"
-      height="50.852077mm"
-      viewBox="0 0 142.28186 50.852077"
+      width={`${width}mm`}
+      height={`${height}mm`}
+      viewBox={`${clipXOffset} ${clipYOffset} ${width} ${height}`}
       className={className}
     >
       <g transform="translate(-33.859069,-115.13646)">
