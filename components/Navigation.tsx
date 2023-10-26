@@ -19,7 +19,6 @@ export const Navigation = () => {
 
   const openNavModal = () => {
     setIsNavModalOpen(true);
-
     // This component is rendered client and server side by Next but we only
     // have access to window client-side. Set the initial value of `width`
     // when we're sure we're on the client-side pass.
@@ -55,7 +54,7 @@ export const Navigation = () => {
             initial={{ height: 0 }}
             animate={{ height: "100vh" }}
             exit={{ height: 0 }}
-            className="bg-pink absolute z-50 w-screen"
+            className="bg-pink fixed z-50 w-screen"
           >
             <motion.div
               initial={{ opacity: 0 }}
@@ -63,8 +62,11 @@ export const Navigation = () => {
               exit={{ opacity: 0 }}
               className="flex h-screen flex-col items-center justify-center"
             >
-              <div className="absolute top-6 rounded-full border-2 px-6 py-2 hover:cursor-pointer">
-                <IoClose onClick={closeNavModal} />
+              <div
+                onClick={closeNavModal}
+                className="absolute top-6 rounded-full border-2 px-6 py-2 hover:cursor-pointer"
+              >
+                <IoClose />
               </div>
               {sections.map(({ value, label }) => (
                 <div
@@ -80,11 +82,11 @@ export const Navigation = () => {
       </AnimatePresence>
 
       <div className="fixed top-6 z-40 flex w-full justify-center">
-        <div className="bg-pink rounded-full border-2 px-6 py-2 hover:cursor-pointer">
-          <IoMenu
-            onClick={openNavModal}
-            className="visible text-lg md:hidden"
-          />
+        <div
+          onClick={openNavModal}
+          className="bg-pink rounded-full border-2 px-6 py-2 text-lg hover:cursor-pointer"
+        >
+          <IoMenu />
         </div>
       </div>
     </>
