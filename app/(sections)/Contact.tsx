@@ -10,7 +10,7 @@ export const Contact = () => {
   const { scrollY } = useScrollAnimation();
 
   return (
-    <section className="bg-blue relative z-10 py-14">
+    <section id="contact" className="bg-blue relative z-10 py-14">
       <Drip
         animate={
           width >= 800

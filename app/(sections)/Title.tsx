@@ -4,13 +4,17 @@ import { FaChevronDown } from "react-icons/fa";
 import { Drip } from "@/components/Drip";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useViewport } from "@/hooks/useViewport";
+import { routes } from "@/utils/routes";
 
 export const Title = () => {
   const { width } = useViewport();
   const { scrollY } = useScrollAnimation();
 
   return (
-    <section className="bg-blue relative z-10 flex min-h-[90vh] items-center px-20 pt-24">
+    <section
+      id="home"
+      className="bg-blue relative z-10 flex min-h-[90vh] items-center px-20 pt-24"
+    >
       <div className="text-center">
         <h2 className="mb-4">EMILY ZHAI</h2>
         <h1 className="mb-3">FULL-STACK SOFTWARE BUILT FOR HUMANS</h1>
@@ -19,9 +23,12 @@ export const Title = () => {
           real problems for real people.
         </p>
         <motion.button initial="default" whileHover="hover" className="mt-10">
-          <div className="rounded-full border-2 px-4 py-1 font-bold">
+          <a
+            href={routes.projects}
+            className="rounded-full border-2 px-4 py-1 font-bold"
+          >
             here&apos;s proof
-          </div>
+          </a>
           <motion.div
             variants={{
               hover: {

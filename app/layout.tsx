@@ -12,7 +12,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-black text-[3vw] md:text-[1.7vw]">
+    <html
+      lang="en"
+      className="scroll-smooth bg-black text-[3vw] md:text-[1.7vw]"
+    >
       <body>{children}</body>
     </html>
   );

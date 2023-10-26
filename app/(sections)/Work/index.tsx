@@ -97,7 +97,7 @@ export const Work = () => {
       />
 
       <div className="relative w-screen overflow-x-hidden">
-        <div className="absolute top-28 -z-10">
+        <div className="absolute top-44 -z-10">
           <div className="font-trailers text-pink clip -my-8 -ml-5 overflow-hidden whitespace-nowrap text-9xl">
             CONVOY PINTEREST LIMEADE LABKEY
           </div>
@@ -112,7 +112,10 @@ export const Work = () => {
           </div>
         </div>
 
-        <div className="flex-wrap-none scrollbar-none flex overflow-x-scroll pb-8 pt-4">
+        <div
+          id="work"
+          className="flex-wrap-none scrollbar-none flex overflow-x-scroll py-20"
+        >
           {jobs.map((job, i) => (
             <WorkCard
               key={job.company}

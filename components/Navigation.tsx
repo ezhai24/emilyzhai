@@ -3,19 +3,38 @@ import { useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 
 import { useViewport } from "@/hooks/useViewport";
+import { routes } from "@/utils/routes";
 
 const sections = [
-  { value: "home", label: "home" },
-  { value: "projects", label: "projects" },
-  { value: "work", label: "work" },
-  { value: "stack", label: "stack" },
-  { value: "contact", label: "contact" },
+  { label: "home", href: routes.home },
+  { label: "projects", href: routes.projects },
+  { label: "work", href: routes.work },
+  { label: "stack", href: routes.stack },
+  { label: "contact", href: routes.contact },
 ];
 
 export const Navigation = () => {
   const { width } = useViewport();
 
   const [isNavModalOpen, setIsNavModalOpen] = useState(false);
+
+  const goToSection = (href: string) => {
+    if (typeof window !== "undefined") {
+      document.querySelector(href)?.scrollIntoView();
+
+      if (href === routes.home) {
+        history.pushState("", document.title, window.location.pathname);
+      } else {
+        window.location.hash = href;
+      }
+
+      document.body.style.overflow = "unset";
+    }
+
+    if (width < 800) {
+      setIsNavModalOpen(false);
+    }
+  };
 
   const openNavModal = () => {
     setIsNavModalOpen(true);
@@ -35,8 +54,12 @@ export const Navigation = () => {
     return (
       <nav className="fixed top-6 z-40 flex w-full justify-center">
         <div className="bg-pink flex flex-row gap-8 rounded-full border-2 px-8 py-2">
-          {sections.map(({ value, label }) => (
-            <div key={value} className="hover:cursor-pointer hover:underline">
+          {sections.map(({ label, href }) => (
+            <div
+              key={href}
+              onClick={() => goToSection(href)}
+              className="hover:cursor-pointer hover:underline"
+            >
               {label}
             </div>
           ))}
@@ -68,9 +91,10 @@ export const Navigation = () => {
               >
                 <IoClose />
               </div>
-              {sections.map(({ value, label }) => (
+              {sections.map(({ label, href }) => (
                 <div
-                  key={value}
+                  key={href}
+                  onClick={() => goToSection(href)}
                   className="my-4 hover:cursor-pointer hover:underline"
                 >
                   {label}

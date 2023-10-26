@@ -75,8 +75,11 @@ export const Stack = () => {
   };
 
   return (
-    <section className="relative w-screen overflow-x-hidden py-28 md:pt-36">
-      <div className="mx-auto flex w-5/6 flex-col md:w-fit md:flex-row">
+    <section className="relative w-screen overflow-x-hidden pb-28 pt-8 md:pt-16">
+      <div
+        id="stack"
+        className="mx-auto flex w-5/6 flex-col pt-20 md:w-fit md:flex-row"
+      >
         <Icon className="absolute -right-32 top-32 -z-10 h-auto w-[150%] text-white/30 md:right-10 md:w-1/2" />
         <h1 className="pointer-events-none z-10 mb-10 text-center text-white md:absolute md:bottom-80 md:right-60 md:mb-4">
           STACK

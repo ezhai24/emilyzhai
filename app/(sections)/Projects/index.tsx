@@ -60,7 +60,7 @@ const projects: DisplayedProject[] = [
 
 export const Projects = () => {
   return (
-    <section className="mt-20">
+    <section id="projects" className="pt-20">
       <h1 className="text-center text-white">PROJECTS</h1>
       <div className="mx-auto mt-4 flex w-5/6 flex-col gap-8 md:grid md:grid-cols-5">
         {projects.map(({ colSpan, ...project }) => (
