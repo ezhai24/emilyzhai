@@ -39,9 +39,10 @@ export const Title = () => {
       </motion.button>
 
       <Drip
-        animate={{ scaleY: Math.min(0.5 + scrollY, 1) }}
+        initial={{ scaleY: Math.min(0.5 + 2 * scrollY, 1.25) }}
+        animate={{ scaleY: Math.min(0.5 + 2 * scrollY, 1.25) }}
         fill="rgb(var(--color-blue))"
-        className="absolute -bottom-28 left-0 -z-10 h-auto w-screen md:-bottom-48"
+        className="pointer-events-none absolute -bottom-28 left-0 -z-10 h-auto w-screen md:-bottom-48"
       />
     </section>
   );

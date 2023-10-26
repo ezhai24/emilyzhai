@@ -23,6 +23,10 @@ const config: Config = {
         poller: ["Poller One, sans-serif"],
         sans: ["Kumbh Sans", ...defaultTheme.fontFamily.sans],
       },
+      flex: {
+        "5": "5 5 0%",
+        "9": "9 9 0%",
+      },
     },
   },
   plugins: [],
