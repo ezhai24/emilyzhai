@@ -111,7 +111,9 @@ export const Stack = () => {
               onMouseEnter={() => setHoveredTech(tech)}
               onTap={() => onTapCoreTech(tech)}
               className={`${
-                hoveredTech.label === tech.label ? "font-bold" : "font-normal"
+                hoveredTech.label === tech.label
+                  ? "font-kumbh-bold"
+                  : "font-normal"
               } bg-pink mb-2 block rounded-xl py-4 text-center hover:cursor-pointer`}
             >
               {tech.label}

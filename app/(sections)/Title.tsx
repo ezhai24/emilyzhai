@@ -26,7 +26,7 @@ export const Title = () => {
         <motion.button initial="default" whileHover="hover" className="mt-10">
           <Link
             href={routes.projects}
-            className="rounded-full border-2 px-4 py-1 font-bold"
+            className="font-kumbh-bold rounded-full border-2 px-4 py-1"
           >
             here&apos;s proof
           </Link>

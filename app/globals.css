@@ -1,9 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Poller+One&display=swap");
-@font-face {
-  font-family: "TT Trailers";
-  src: url("/fonts/TT-Trailers.ttf") format("truetype");
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,7 +27,7 @@
     font-size: 7vw;
   }
   h3 {
-    @apply font-bold;
+    @apply font-kumbh-bold;
   }
   p {
     line-height: 1.35;

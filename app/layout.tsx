@@ -1,5 +1,28 @@
 import type { Metadata } from "next";
+import { Kumbh_Sans, Poller_One } from "next/font/google";
+import localFont from "next/font/local";
+
 import "./globals.css";
+
+const trailers = localFont({
+  src: "./fonts/TT-Trailers.ttf",
+  variable: "--font-trailers",
+});
+const poller = Poller_One({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-poller",
+});
+const kumbh = Kumbh_Sans({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-kumbh",
+});
+const kumbhBold = Kumbh_Sans({
+  weight: "700",
+  subsets: ["latin"],
+  variable: "--font-kumbh-bold",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="scroll-smooth bg-black text-[3vw] md:text-[1.7vw]"
+      className={`${trailers.variable} ${poller.variable} ${kumbh.variable} ${kumbhBold.variable} scroll-smooth bg-black text-[3vw] md:text-[1.7vw]`}
     >
       <body>{children}</body>
     </html>

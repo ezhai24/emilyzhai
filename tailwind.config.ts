@@ -19,9 +19,10 @@ const config: Config = {
         gray: "rgb(var(--color-gray) / <alpha-value>)",
       },
       fontFamily: {
-        trailers: ["TT Trailers, sans-serif"],
-        poller: ["Poller One, sans-serif"],
-        sans: ["Kumbh Sans", ...defaultTheme.fontFamily.sans],
+        trailers: ["var(--font-trailers), sans-serif"],
+        poller: ["var(--font-poller), sans-serif"],
+        "kumbh-bold": ["var(--font-kumbh-bold), sans-serif"],
+        sans: ["var(--font-kumbh)", ...defaultTheme.fontFamily.sans],
       },
       flex: {
         "5": "5 5 0%",
