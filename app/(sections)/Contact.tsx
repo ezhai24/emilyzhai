@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AiFillCodeSandboxCircle } from "react-icons/ai";
 import { BsGithub, BsLinkedin, BsMedium } from "react-icons/bs";
 
@@ -24,73 +25,81 @@ export const Contact = () => {
       <div className="mx-auto w-5/6">
         <h1>LET&apos;S TALK SHOP</h1>
         <div className="ml-2 flex items-center">
-          <a
+          <Link
             href="https://www.linkedin.com/in/emily-zhai-b7b32a103/"
             target="_blank"
             className="text-2xl hover:cursor-pointer"
           >
             <BsLinkedin />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://github.com/ezhai24"
             target="_blank"
             className="ml-2 text-2xl hover:cursor-pointer"
           >
             <BsGithub />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://codesandbox.io/u/ezhai24"
             target="_blank"
             className="ml-1 text-3xl hover:cursor-pointer"
           >
             <AiFillCodeSandboxCircle />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://medium.com/@ezhai24"
             target="_blank"
             className="ml-1 text-2xl hover:cursor-pointer"
           >
             <BsMedium />
-          </a>
+          </Link>
           <span className="mx-4">|</span>
-          <a href="mailto:ezhai24@gmail.com" className="underline">
+          <Link href="mailto:ezhai24@gmail.com" className="underline">
             ezhai24@gmail.com
-          </a>
+          </Link>
         </div>
 
         <p className="ml-2 mt-12 max-w-lg text-xs">
           Designed in{" "}
-          <a
+          <Link
             href="https://www.figma.com/file/PFl3hZ9pkislzSuRyWDqCP/Portfolio-Website?type=design&node-id=22%3A540&mode=design&t=5p2xtc9iSH8Uy0Ct-1"
             target="_blank"
             className="underline"
           >
             Figma
-          </a>{" "}
+          </Link>{" "}
           and coded in{" "}
-          <a
+          <Link
             href="https://code.visualstudio.com/"
             target="_blank"
             className="underline"
           >
             Visual Studio Code
-          </a>{" "}
+          </Link>{" "}
           by yours truly. Built with{" "}
-          <a href="https://nextjs.org/" target="_blank" className="underline">
+          <Link
+            href="https://nextjs.org/"
+            target="_blank"
+            className="underline"
+          >
             Next.js
-          </a>{" "}
+          </Link>{" "}
           and{" "}
-          <a
+          <Link
             href="https://tailwindcss.com/"
             target="_blank"
             className="underline"
           >
             Tailwind CSS
-          </a>
+          </Link>
           , deployed with{" "}
-          <a href="https://vercel.com/" target="_blank" className="underline">
+          <Link
+            href="https://vercel.com/"
+            target="_blank"
+            className="underline"
+          >
             Vercel
-          </a>
+          </Link>
           .
         </p>
 

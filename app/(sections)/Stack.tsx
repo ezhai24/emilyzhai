@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useState } from "react";
 import { IconType } from "react-icons";
 import {
@@ -106,27 +107,27 @@ export const Stack = () => {
           <div className="ml-4 mt-4 flex gap-6">
             <div>
               {miscTech.map((tech) => (
-                <a
+                <Link
                   key={tech.label}
                   href={tech.link}
                   target="_blank"
                   className="block py-1 underline md:no-underline md:hover:underline"
                 >
                   {tech.label}
-                </a>
+                </Link>
               ))}
             </div>
 
             <div>
               {tools.map((tool) => (
-                <a
+                <Link
                   key={tool.label}
                   href={tool.link}
                   target="_blank"
                   className="block py-1 underline md:no-underline md:hover:underline"
                 >
                   {tool.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

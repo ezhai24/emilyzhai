@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { FaChevronDown } from "react-icons/fa";
 
 import { Drip } from "@/components/Drip";
@@ -23,12 +24,12 @@ export const Title = () => {
           real problems for real people.
         </p>
         <motion.button initial="default" whileHover="hover" className="mt-10">
-          <a
+          <Link
             href={routes.projects}
             className="rounded-full border-2 px-4 py-1 font-bold"
           >
             here&apos;s proof
-          </a>
+          </Link>
           <motion.div
             variants={{
               hover: {
