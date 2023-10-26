@@ -1,6 +1,7 @@
 "use client";
 
 import { Projects } from "./(sections)/Projects/index";
+import { Stack } from "./(sections)/Stack";
 import { Title } from "./(sections)/Title";
 import { Work } from "./(sections)/Work";
 
@@ -14,6 +15,7 @@ export default function Home() {
         <Title />
         <Projects />
         <Work />
+        <Stack />
       </main>
     </>
   );
