@@ -3,8 +3,10 @@ import { FaChevronDown } from "react-icons/fa";
 
 import { Drip } from "@/components/Drip";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useViewport } from "@/hooks/useViewport";
 
 export const Title = () => {
+  const { width } = useViewport();
   const { scrollY } = useScrollAnimation();
 
   return (
@@ -38,10 +40,15 @@ export const Title = () => {
       </div>
 
       <Drip
-        initial={{ scaleY: Math.min(0.5 + 2.5 * scrollY, 1.3) }}
-        animate={{ scaleY: Math.min(0.5 + 2.5 * scrollY, 1.3) }}
+        animate={
+          width >= 800
+            ? { scaleY: Math.min(0.5 + 2.5 * scrollY, 1.3) }
+            : { scaleY: Math.min(0.75 + 5 * scrollY, 1.8) }
+        }
+        transition={{ duration: 0 }}
         fill="rgb(var(--color-blue))"
-        className="pointer-events-none absolute -bottom-28 left-0 -z-10 h-auto w-screen md:-bottom-48"
+        clipX={width >= 800 ? undefined : [25, 130]}
+        className="pointer-events-none absolute -bottom-32 left-0 -z-10 h-auto w-screen md:-bottom-48"
       />
     </section>
   );

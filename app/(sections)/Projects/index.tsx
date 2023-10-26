@@ -78,7 +78,7 @@ export const Projects = () => {
         }}
         className="mx-auto mt-8 w-5/6 hover:cursor-pointer md:ml-[28%] md:w-1/3"
       >
-        <div className="bg-pink mx-auto h-8 w-[98%] rounded-t-lg" />
+        <div className="bg-pink mx-auto h-4 w-[98%] rounded-t-lg" />
         <div className="mx-auto flex w-full items-center justify-center gap-0.5 border-y-4 bg-white py-2 font-bold">
           project archive
           <motion.div

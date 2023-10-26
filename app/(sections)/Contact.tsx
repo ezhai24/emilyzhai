@@ -2,13 +2,24 @@ import { AiFillCodeSandboxCircle } from "react-icons/ai";
 import { BsGithub, BsLinkedin, BsMedium } from "react-icons/bs";
 
 import { Drip } from "@/components/Drip";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useViewport } from "@/hooks/useViewport";
 
 export const Contact = () => {
+  const { width } = useViewport();
+  const { scrollY } = useScrollAnimation();
+
   return (
     <section className="bg-blue relative z-10 py-14">
       <Drip
+        animate={
+          width >= 800
+            ? { scaleY: -1.2 + 2 * (scrollY - 0.8) }
+            : { scaleY: -1.75 + 5 * (scrollY - 0.8) }
+        }
+        transition={{ duration: 0 }}
         fill="rgb(var(--color-blue))"
-        className="pointer-events-none absolute -top-28 -z-10 h-auto w-screen -scale-y-100 md:-top-48"
+        className="pointer-events-none absolute -top-28 -z-10 h-auto w-screen md:-top-48"
       />
       <div className="mx-auto w-5/6">
         <h1>LET&apos;S TALK SHOP</h1>

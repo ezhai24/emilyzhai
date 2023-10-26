@@ -1,6 +1,7 @@
 import { WorkCard, WorkType } from "./WorkCard";
 
 import { Drip } from "@/components/Drip";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useViewport } from "@/hooks/useViewport";
 
 const jobs: WorkType[] = [
@@ -65,18 +66,34 @@ const jobs: WorkType[] = [
 ];
 export const Work = () => {
   const { width } = useViewport();
+  const { scrollY } = useScrollAnimation();
 
   return (
     <section className="bg-gray relative z-10">
       <Drip
+        animate={
+          width >= 800
+            ? {
+                scaleX: -1,
+                scaleY: -1.05 + 3 * (scrollY - 0.35),
+              }
+            : { scaleX: -1, scaleY: Math.min(-0.1, -2 + 2.5 * scrollY) }
+        }
+        transition={{ duration: 0 }}
         fill="rgb(var(--color-gray))"
-        clipX={width < 800 ? [30, 120] : undefined}
-        className="pointer-events-none absolute -top-36 -z-10 h-auto w-full -scale-x-100 -scale-y-90 md:-top-48"
+        clipX={width >= 800 ? undefined : [30, 120]}
+        className="pointer-events-none absolute -top-40 -z-10 h-auto w-full md:-top-48"
       />
       <Drip
+        animate={
+          width >= 800
+            ? { scaleY: Math.min(0.3 + 2 * (scrollY - 0.5), 0.9) }
+            : { scaleX: -1, scaleY: 0.1 + 4 * (scrollY - 0.5) }
+        }
+        transition={{ duration: 0 }}
         fill="rgb(var(--color-gray))"
         clipX={width < 800 ? [30, 120] : undefined}
-        className="pointer-events-none absolute -bottom-36 -z-10 h-auto w-full scale-y-90 md:-bottom-48"
+        className="pointer-events-none absolute -bottom-40 -z-10 h-auto w-full md:-bottom-48"
       />
 
       <div className="relative w-screen overflow-x-hidden">
