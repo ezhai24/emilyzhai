@@ -18,7 +18,7 @@ export const FullPageNavModal = (props: Props) => {
           initial={{ height: 0 }}
           animate={{ height: "100vh" }}
           exit={{ height: 0 }}
-          className="bg-pink fixed z-50 w-screen"
+          className="bg-pink fixed z-50 w-screen md:hidden"
         >
           <motion.div
             initial={{ opacity: 0 }}

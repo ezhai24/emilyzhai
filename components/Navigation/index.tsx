@@ -47,31 +47,14 @@ export const Navigation = () => {
       document.body.style.overflow = "hidden";
     }
   };
+
   const closeNavModal = () => {
     setIsNavModalOpen(false);
     document.body.style.overflow = "unset";
   };
 
-  if (width >= 800) {
-    return (
-      <nav className="fixed top-6 z-40 flex w-full justify-center">
-        <div className="bg-pink flex flex-row gap-8 rounded-full border-2 px-8 py-2">
-          {sections.map(({ label, href }) => (
-            <div
-              key={href}
-              onClick={() => goToSection(href)}
-              className="hover:cursor-pointer hover:underline"
-            >
-              {label}
-            </div>
-          ))}
-        </div>
-      </nav>
-    );
-  }
-
   return (
-    <>
+    <nav>
       <FullPageNavModal
         isNavModalOpen={isNavModalOpen}
         sections={sections}
@@ -80,12 +63,21 @@ export const Navigation = () => {
       />
       <div className="fixed top-6 z-40 flex w-full justify-center">
         <div
-          onClick={openNavModal}
-          className="bg-pink rounded-full border-2 px-6 py-2 text-lg hover:cursor-pointer"
+          onClick={width >= 800 ? undefined : openNavModal}
+          className="bg-pink flex flex-row items-center gap-8 rounded-full border-2 px-6 py-2 hover:cursor-pointer"
         >
-          <IoMenu />
+          <IoMenu className="text-lg md:hidden" />
+          {sections.map(({ label, href }) => (
+            <div
+              key={href}
+              onClick={() => goToSection(href)}
+              className="hidden hover:cursor-pointer hover:underline md:block"
+            >
+              {label}
+            </div>
+          ))}
         </div>
       </div>
-    </>
+    </nav>
   );
 };
