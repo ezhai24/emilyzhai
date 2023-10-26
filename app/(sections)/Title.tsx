@@ -1,14 +1,11 @@
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { useState } from "react";
+import { motion } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
 
 import { Drip } from "@/components/Drip";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const Title = () => {
-  const { scrollYProgress } = useScroll();
-  const [scrollY, setScrollY] = useState(0);
-
-  useMotionValueEvent(scrollYProgress, "change", (y) => setScrollY(y));
+  const { scrollY } = useScrollAnimation();
 
   return (
     <section className="bg-blue relative z-10 flex min-h-[90vh] items-center px-20 pt-24">
