@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { CSSProperties, MouseEventHandler } from "react";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 
+import { Tag } from "@/components/Tag";
+
 export type Project = {
   name: string;
   description: string;
@@ -68,12 +70,7 @@ export const ProjectCard = (props: Props) => {
         </div>
         <ul className="flex flex-wrap gap-1">
           {tags.map((tag) => (
-            <li
-              key={tag}
-              className="rounded-full bg-zinc-100 px-2 py-0.5 text-xs"
-            >
-              {tag}
-            </li>
+            <Tag key={tag} label={tag} />
           ))}
         </ul>
         {githubLink && (
