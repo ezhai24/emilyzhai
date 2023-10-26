@@ -26,6 +26,7 @@ export const Contact = () => {
         <h1>LET&apos;S TALK SHOP</h1>
         <div className="ml-2 flex items-center">
           <Link
+            aria-label="Visit Emily Zhai's LinkedIn profile"
             href="https://www.linkedin.com/in/emily-zhai-b7b32a103/"
             target="_blank"
             className="text-2xl hover:cursor-pointer"
@@ -33,6 +34,7 @@ export const Contact = () => {
             <BsLinkedin />
           </Link>
           <Link
+            aria-label="Visit Emily Zhai's Github profile"
             href="https://github.com/ezhai24"
             target="_blank"
             className="ml-2 text-2xl hover:cursor-pointer"
@@ -40,6 +42,7 @@ export const Contact = () => {
             <BsGithub />
           </Link>
           <Link
+            aria-label="Visit Emily Zhai's Code Sandbox profile"
             href="https://codesandbox.io/u/ezhai24"
             target="_blank"
             className="ml-1 text-3xl hover:cursor-pointer"
@@ -47,6 +50,7 @@ export const Contact = () => {
             <AiFillCodeSandboxCircle />
           </Link>
           <Link
+            aria-label="Visit Emily Zhai's Medium profile"
             href="https://medium.com/@ezhai24"
             target="_blank"
             className="ml-1 text-2xl hover:cursor-pointer"
