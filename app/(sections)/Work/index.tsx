@@ -129,3 +129,5 @@ export const Work = () => {
     </section>
   );
 };
+
+export default Work;

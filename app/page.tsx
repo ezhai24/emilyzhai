@@ -1,12 +1,15 @@
 "use client";
 
-import { Contact } from "./(sections)/Contact";
-import { Projects } from "./(sections)/Projects/index";
-import { Stack } from "./(sections)/Stack";
-import { Title } from "./(sections)/Title";
-import { Work } from "./(sections)/Work";
+import dynamic from "next/dynamic";
 
-import { Navigation } from "@/components/Navigation";
+import { Title } from "./(sections)/Title";
+
+import { Navigation } from "@/components/Navigation/index";
+
+const Contact = dynamic(() => import("./(sections)/Contact"));
+const Stack = dynamic(() => import("./(sections)/Stack"));
+const Projects = dynamic(() => import("./(sections)/Projects"));
+const Work = dynamic(() => import("./(sections)/Work"));
 
 export default function Home() {
   return (

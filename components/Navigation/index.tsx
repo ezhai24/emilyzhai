@@ -1,9 +1,11 @@
-import { AnimatePresence, motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import { useState } from "react";
-import { IoClose, IoMenu } from "react-icons/io5";
+import { IoMenu } from "react-icons/io5";
 
 import { useViewport } from "@/hooks/useViewport";
 import { routes } from "@/utils/routes";
+
+const FullPageNavModal = dynamic(() => import("./FullPageNavModal"));
 
 const sections = [
   { label: "home", href: routes.home },
@@ -70,41 +72,12 @@ export const Navigation = () => {
 
   return (
     <>
-      <AnimatePresence>
-        {isNavModalOpen && (
-          <motion.div
-            key="navModal"
-            initial={{ height: 0 }}
-            animate={{ height: "100vh" }}
-            exit={{ height: 0 }}
-            className="bg-pink fixed z-50 w-screen"
-          >
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="flex h-screen flex-col items-center justify-center"
-            >
-              <div
-                onClick={closeNavModal}
-                className="absolute top-6 rounded-full border-2 px-6 py-2 hover:cursor-pointer"
-              >
-                <IoClose />
-              </div>
-              {sections.map(({ label, href }) => (
-                <div
-                  key={href}
-                  onClick={() => goToSection(href)}
-                  className="my-4 hover:cursor-pointer hover:underline"
-                >
-                  {label}
-                </div>
-              ))}
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
+      <FullPageNavModal
+        isNavModalOpen={isNavModalOpen}
+        sections={sections}
+        closeNavModal={closeNavModal}
+        goToSection={goToSection}
+      />
       <div className="fixed top-6 z-40 flex w-full justify-center">
         <div
           onClick={openNavModal}

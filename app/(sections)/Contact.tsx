@@ -1,10 +1,22 @@
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import { AiFillCodeSandboxCircle } from "react-icons/ai";
-import { BsGithub, BsLinkedin, BsMedium } from "react-icons/bs";
 
 import { Drip } from "@/components/Drip";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useViewport } from "@/hooks/useViewport";
+
+const BsGithub = dynamic(() =>
+  import("react-icons/bs").then((module) => module.BsGithub),
+);
+const BsLinkedin = dynamic(() =>
+  import("react-icons/bs").then((module) => module.BsLinkedin),
+);
+const BsMedium = dynamic(() =>
+  import("react-icons/bs").then((module) => module.BsMedium),
+);
+const AiFillCodeSandboxCircle = dynamic(() =>
+  import("react-icons/ai").then((module) => module.AiFillCodeSandboxCircle),
+);
 
 export const Contact = () => {
   const { width } = useViewport();
@@ -112,3 +124,5 @@ export const Contact = () => {
     </section>
   );
 };
+
+export default Contact;

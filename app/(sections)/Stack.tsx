@@ -1,26 +1,43 @@
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useState } from "react";
-import { IconType } from "react-icons";
-import {
-  BiLogoAws,
-  BiLogoPostgresql,
-  BiLogoTailwindCss,
-  BiLogoTypescript,
-} from "react-icons/bi";
-import { BsGithub } from "react-icons/bs";
-import { FaReact } from "react-icons/fa";
-import { SiApollographql, SiJest } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
+
+const BiLogoAws = dynamic(() =>
+  import("react-icons/bi").then((module) => module.BiLogoAws),
+);
+const BiLogoPostgresql = dynamic(() =>
+  import("react-icons/bi").then((module) => module.BiLogoPostgresql),
+);
+const BiLogoTailwindCss = dynamic(() =>
+  import("react-icons/bi").then((module) => module.BiLogoTailwindCss),
+);
+const BiLogoTypescript = dynamic(() =>
+  import("react-icons/bi").then((module) => module.BiLogoTypescript),
+);
+const BsGithub = dynamic(() =>
+  import("react-icons/bs").then((module) => module.BsGithub),
+);
+const FaReact = dynamic(() =>
+  import("react-icons/fa").then((module) => module.FaReact),
+);
+const SiApollographql = dynamic(() =>
+  import("react-icons/si").then((module) => module.SiApollographql),
+);
+const SiJest = dynamic(() =>
+  import("react-icons/si").then((module) => module.SiJest),
+);
+const TbBrandNextjs = dynamic(() =>
+  import("react-icons/tb").then((module) => module.TbBrandNextjs),
+);
 
 type Tech = {
   label: string;
   link: string;
-  icon?: IconType;
 };
 
 type CoreTech = Tech & {
-  icon: IconType;
+  icon: any;
 };
 
 const coreStack: CoreTech[] = [
@@ -136,3 +153,5 @@ export const Stack = () => {
     </section>
   );
 };
+
+export default Stack;
