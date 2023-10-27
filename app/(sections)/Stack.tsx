@@ -110,7 +110,7 @@ export const Stack = () => {
                   key={tech.label}
                   href={tech.link}
                   target="_blank"
-                  className="block py-1 underline md:no-underline md:hover:underline"
+                  className="block py-2 text-xl underline md:py-1 md:text-sm md:no-underline md:hover:underline"
                 >
                   {tech.label}
                 </Link>
@@ -123,7 +123,7 @@ export const Stack = () => {
                   key={tool.label}
                   href={tool.link}
                   target="_blank"
-                  className="block py-1 underline md:no-underline md:hover:underline"
+                  className="block py-2 text-xl underline md:py-1 md:text-sm md:no-underline md:hover:underline"
                 >
                   {tool.label}
                 </Link>

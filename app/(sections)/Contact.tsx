@@ -35,7 +35,7 @@ export const Contact = () => {
             aria-label="Visit Emily Zhai's LinkedIn profile"
             href="https://www.linkedin.com/in/emily-zhai-b7b32a103/"
             target="_blank"
-            className="text-2xl hover:cursor-pointer"
+            className="text-4xl hover:cursor-pointer md:text-2xl"
           >
             <AiFillLinkedin />
           </Link>
@@ -43,7 +43,7 @@ export const Contact = () => {
             aria-label="Visit Emily Zhai's Github profile"
             href="https://github.com/ezhai24"
             target="_blank"
-            className="ml-2 text-2xl hover:cursor-pointer"
+            className="ml-2 text-4xl hover:cursor-pointer md:ml-1 md:text-2xl"
           >
             <AiFillGithub />
           </Link>
@@ -51,7 +51,7 @@ export const Contact = () => {
             aria-label="Visit Emily Zhai's Code Sandbox profile"
             href="https://codesandbox.io/u/ezhai24"
             target="_blank"
-            className="ml-1 text-3xl hover:cursor-pointer"
+            className="ml-2 text-4xl hover:cursor-pointer md:ml-1 md:text-2xl"
           >
             <AiFillCodeSandboxCircle />
           </Link>
@@ -59,7 +59,7 @@ export const Contact = () => {
             aria-label="Visit Emily Zhai's Medium profile"
             href="https://medium.com/@ezhai24"
             target="_blank"
-            className="ml-1 text-2xl hover:cursor-pointer"
+            className="ml-2 text-4xl hover:cursor-pointer md:ml-1 md:text-2xl"
           >
             <AiFillMediumSquare />
           </Link>
