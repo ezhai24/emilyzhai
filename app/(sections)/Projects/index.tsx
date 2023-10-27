@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
 
 import { Camera } from "./Camera";
 import { Project, ProjectCard } from "./ProjectCard";
 import { Truck } from "./Truck";
+
+import { routes } from "@/utils/routes";
 
 type DisplayedProject = Project & {
   colSpan: number;
@@ -71,26 +74,28 @@ export const Projects = () => {
           />
         ))}
       </div>
-      <motion.div
-        whileHover="hover"
-        variants={{
-          hover: { scale: 1.025 },
-        }}
-        className="mx-auto mt-8 w-5/6 hover:cursor-pointer md:ml-[28%] md:w-1/3"
-      >
-        <div className="bg-pink mx-auto h-4 w-[98%] rounded-t-lg" />
-        <div className="font-kumbh-bold mx-auto flex w-full items-center justify-center gap-0.5 border-y-4 bg-white py-2">
-          project archive
-          <motion.div
-            variants={{
-              hover: { x: 2, y: -2 },
-            }}
-          >
-            <BsArrowUpRight />
-          </motion.div>
-        </div>
-        <div className="bg-pink mx-auto h-20 w-[98%] pt-8" />
-      </motion.div>
+      <Link href={routes.archive}>
+        <motion.div
+          whileHover="hover"
+          variants={{
+            hover: { scale: 1.025 },
+          }}
+          className="mx-auto mt-8 w-5/6 hover:cursor-pointer md:ml-[28%] md:w-1/3"
+        >
+          <div className="bg-pink mx-auto h-4 w-[98%] rounded-t-lg" />
+          <div className="font-kumbh-bold mx-auto flex w-full items-center justify-center gap-0.5 border-y-4 bg-white py-2">
+            project archive
+            <motion.div
+              variants={{
+                hover: { x: 2, y: -2 },
+              }}
+            >
+              <BsArrowUpRight />
+            </motion.div>
+          </div>
+          <div className="bg-pink mx-auto h-20 w-[98%] pt-8" />
+        </motion.div>
+      </Link>
     </section>
   );
 };

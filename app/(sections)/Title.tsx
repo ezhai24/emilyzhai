@@ -26,7 +26,7 @@ export const Title = () => {
 
   return (
     <section
-      id="home"
+      id="title"
       className="bg-blue relative z-10 flex min-h-[90vh] items-center px-20 pt-24"
     >
       <div className="text-center">

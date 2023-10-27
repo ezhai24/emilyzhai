@@ -8,7 +8,7 @@ import { routes } from "@/utils/routes";
 const FullPageNavModal = dynamic(() => import("./FullPageNavModal"));
 
 const sections = [
-  { label: "home", href: routes.home },
+  { label: "home", href: routes.title },
   { label: "projects", href: routes.projects },
   { label: "work", href: routes.work },
   { label: "stack", href: routes.stack },
@@ -24,7 +24,7 @@ export const Navigation = () => {
     if (typeof window !== "undefined") {
       document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
 
-      if (href === routes.home) {
+      if (href === routes.title) {
         history.pushState("", document.title, window.location.pathname);
       } else {
         history.pushState(

@@ -1,7 +1,10 @@
 export const routes = {
-  home: "#home",
+  home: "/",
+  title: "#title",
   projects: "#projects",
   work: "#work",
   stack: "#stack",
   contact: "#contact",
+
+  archive: "/archive",
 };
