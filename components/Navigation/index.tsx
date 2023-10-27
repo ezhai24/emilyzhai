@@ -22,12 +22,16 @@ export const Navigation = () => {
 
   const goToSection = (href: string) => {
     if (typeof window !== "undefined") {
-      document.querySelector(href)?.scrollIntoView();
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
 
       if (href === routes.home) {
         history.pushState("", document.title, window.location.pathname);
       } else {
-        window.location.hash = href;
+        history.pushState(
+          `#${href}`,
+          document.title,
+          window.location.pathname + href,
+        );
       }
 
       document.body.style.overflow = "unset";

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { FaChevronDown } from "react-icons/fa";
 
 import { Drip } from "@/components/Drip";
@@ -10,6 +9,19 @@ import { routes } from "@/utils/routes";
 export const Title = () => {
   const { width } = useViewport();
   const { scrollY } = useScrollAnimation();
+
+  const goToProjectSection = () => {
+    if (typeof window !== "undefined") {
+      document
+        .querySelector(routes.projects)
+        ?.scrollIntoView({ behavior: "smooth" });
+      history.pushState(
+        `#${routes.projects}`,
+        document.title,
+        window.location.pathname + routes.projects,
+      );
+    }
+  };
 
   return (
     <section
@@ -24,12 +36,12 @@ export const Title = () => {
           real problems for real people.
         </p>
         <motion.button initial="default" whileHover="hover" className="mt-10">
-          <Link
-            href={routes.projects}
+          <div
+            onClick={goToProjectSection}
             className="font-kumbh-bold rounded-full border-2 px-4 py-1"
           >
             here&apos;s proof
-          </Link>
+          </div>
           <motion.div
             variants={{
               hover: {

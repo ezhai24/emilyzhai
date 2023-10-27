@@ -37,7 +37,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${trailers.variable} ${poller.variable} ${kumbh.variable} ${kumbhBold.variable} scroll-smooth bg-black text-[3vw] md:text-[1.7vw]`}
+      style={{ overflowAnchor: "none" }}
+      className={`${trailers.variable} ${poller.variable} ${kumbh.variable} ${kumbhBold.variable} bg-black text-[3vw] md:text-[1.7vw]`}
     >
       <body>{children}</body>
     </html>
