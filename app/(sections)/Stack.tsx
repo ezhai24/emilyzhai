@@ -3,32 +3,44 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useState } from "react";
 
-const BiLogoAws = dynamic(() =>
-  import("react-icons/bi").then((module) => module.BiLogoAws),
+const FaAws = dynamic(() =>
+  import("@react-icons/all-files/fa/FaAws").then((module) => module.FaAws),
 );
-const BiLogoPostgresql = dynamic(() =>
-  import("react-icons/bi").then((module) => module.BiLogoPostgresql),
+const SiPostgresql = dynamic(() =>
+  import("@react-icons/all-files/si/SiPostgresql").then(
+    (module) => module.SiPostgresql,
+  ),
 );
-const BiLogoTailwindCss = dynamic(() =>
-  import("react-icons/bi").then((module) => module.BiLogoTailwindCss),
+const SiTailwindcss = dynamic(() =>
+  import("@react-icons/all-files/si/SiTailwindcss").then(
+    (module) => module.SiTailwindcss,
+  ),
 );
-const BiLogoTypescript = dynamic(() =>
-  import("react-icons/bi").then((module) => module.BiLogoTypescript),
+const SiTypescript = dynamic(() =>
+  import("@react-icons/all-files/si/SiTypescript").then(
+    (module) => module.SiTypescript,
+  ),
 );
-const BsGithub = dynamic(() =>
-  import("react-icons/bs").then((module) => module.BsGithub),
+const AiFillGithub = dynamic(() =>
+  import("@react-icons/all-files/ai/AiFillGithub").then(
+    (module) => module.AiFillGithub,
+  ),
 );
 const FaReact = dynamic(() =>
-  import("react-icons/fa").then((module) => module.FaReact),
+  import("@react-icons/all-files/fa/FaReact").then((module) => module.FaReact),
 );
 const SiApollographql = dynamic(() =>
-  import("react-icons/si").then((module) => module.SiApollographql),
+  import("@react-icons/all-files/si/SiApollographql").then(
+    (module) => module.SiApollographql,
+  ),
 );
 const SiJest = dynamic(() =>
-  import("react-icons/si").then((module) => module.SiJest),
+  import("@react-icons/all-files/si/SiJest").then((module) => module.SiJest),
 );
-const TbBrandNextjs = dynamic(() =>
-  import("react-icons/tb").then((module) => module.TbBrandNextjs),
+const SiNextDotJs = dynamic(() =>
+  import("@react-icons/all-files/si/SiNextDotJs").then(
+    (module) => module.SiNextDotJs,
+  ),
 );
 
 type Tech = {
@@ -44,13 +56,13 @@ const coreStack: CoreTech[] = [
   { label: "React", icon: FaReact, link: "https://react.dev/" },
   {
     label: "Typescript",
-    icon: BiLogoTypescript,
+    icon: SiTypescript,
     link: "https://www.typescriptlang.org/",
   },
-  { label: "Next.js", icon: TbBrandNextjs, link: "https://nextjs.org/" },
+  { label: "Next.js", icon: SiNextDotJs, link: "https://nextjs.org/" },
   {
     label: "Tailwind",
-    icon: BiLogoTailwindCss,
+    icon: SiTailwindcss,
     link: "https://tailwindcss.com/",
   },
   {
@@ -60,12 +72,12 @@ const coreStack: CoreTech[] = [
   },
   {
     label: "Postgres",
-    icon: BiLogoPostgresql,
+    icon: SiPostgresql,
     link: "https://www.postgresql.org/",
   },
-  { label: "AWS", icon: BiLogoAws, link: "https://aws.amazon.com/" },
+  { label: "AWS", icon: FaAws, link: "https://aws.amazon.com/" },
   { label: "Jest", icon: SiJest, link: "https://jestjs.io/" },
-  { label: "Github", icon: BsGithub, link: "https://github.com/" },
+  { label: "Github", icon: AiFillGithub, link: "https://github.com/" },
 ];
 
 const miscTech: Tech[] = [

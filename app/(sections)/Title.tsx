@@ -1,6 +1,6 @@
+import { FaChevronDown } from "@react-icons/all-files/fa/FaChevronDown";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaChevronDown } from "react-icons/fa";
 
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useViewport } from "@/hooks/useViewport";

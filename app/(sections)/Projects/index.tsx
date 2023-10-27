@@ -1,6 +1,6 @@
+import { BsArrowUpRight } from "@react-icons/all-files/bs/BsArrowUpRight";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowUpRight } from "react-icons/bs";
 
 import { Camera } from "./Camera";
 import { Project, ProjectCard } from "./ProjectCard";

@@ -1,6 +1,7 @@
+import { BsArrowUpRight } from "@react-icons/all-files/bs/BsArrowUpRight";
+import { BsLink45Deg } from "@react-icons/all-files/bs/BsLink45Deg";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowUpRight, BsLink45Deg } from "react-icons/bs";
 
 import { Tag } from "@/components/Tag";
 

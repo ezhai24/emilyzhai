@@ -1,5 +1,6 @@
+import { BsArrowLeft } from "@react-icons/all-files/bs/BsArrowLeft";
+import { BsArrowUpRight } from "@react-icons/all-files/bs/BsArrowUpRight";
 import Link from "next/link";
-import { BsArrowLeft, BsArrowUpRight } from "react-icons/bs";
 
 import { projects } from "./data";
 

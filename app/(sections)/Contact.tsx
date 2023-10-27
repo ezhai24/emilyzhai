@@ -7,17 +7,25 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useViewport } from "@/hooks/useViewport";
 import { clampRange } from "@/utils/math";
 
-const BsGithub = dynamic(() =>
-  import("react-icons/bs").then((module) => module.BsGithub),
+const AiFillGithub = dynamic(() =>
+  import("@react-icons/all-files/ai/AiFillGithub").then(
+    (module) => module.AiFillGithub,
+  ),
 );
-const BsLinkedin = dynamic(() =>
-  import("react-icons/bs").then((module) => module.BsLinkedin),
+const AiFillLinkedin = dynamic(() =>
+  import("@react-icons/all-files/ai/AiFillLinkedin").then(
+    (module) => module.AiFillLinkedin,
+  ),
 );
-const BsMedium = dynamic(() =>
-  import("react-icons/bs").then((module) => module.BsMedium),
+const AiFillMediumSquare = dynamic(() =>
+  import("@react-icons/all-files/ai/AiFillMediumSquare").then(
+    (module) => module.AiFillMediumSquare,
+  ),
 );
 const AiFillCodeSandboxCircle = dynamic(() =>
-  import("react-icons/ai").then((module) => module.AiFillCodeSandboxCircle),
+  import("@react-icons/all-files/ai/AiFillCodeSandboxCircle").then(
+    (module) => module.AiFillCodeSandboxCircle,
+  ),
 );
 
 export const Contact = () => {
@@ -47,7 +55,7 @@ export const Contact = () => {
             target="_blank"
             className="text-2xl hover:cursor-pointer"
           >
-            <BsLinkedin />
+            <AiFillLinkedin />
           </Link>
           <Link
             aria-label="Visit Emily Zhai's Github profile"
@@ -55,7 +63,7 @@ export const Contact = () => {
             target="_blank"
             className="ml-2 text-2xl hover:cursor-pointer"
           >
-            <BsGithub />
+            <AiFillGithub />
           </Link>
           <Link
             aria-label="Visit Emily Zhai's Code Sandbox profile"
@@ -71,7 +79,7 @@ export const Contact = () => {
             target="_blank"
             className="ml-1 text-2xl hover:cursor-pointer"
           >
-            <BsMedium />
+            <AiFillMediumSquare />
           </Link>
           <span className="mx-4">|</span>
           <Link href="mailto:ezhai24@gmail.com" className="underline">

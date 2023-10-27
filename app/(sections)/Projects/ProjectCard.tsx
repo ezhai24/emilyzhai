@@ -1,7 +1,8 @@
+import { BsArrowUpRight } from "@react-icons/all-files/bs/BsArrowUpRight";
+// import { BsGithub } from "@react-icons/all-files/bs/BsGithub";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { CSSProperties, MouseEventHandler } from "react";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 
 import { Tag } from "@/components/Tag";
 
@@ -72,14 +73,14 @@ export const ProjectCard = (props: Props) => {
               <Tag key={tag} label={tag} />
             ))}
           </ul>
-          {githubLink && (
+          {/* {githubLink && (
             <div
               onClick={openGHLink}
               className="mt-3 text-lg hover:cursor-pointer"
             >
               <BsGithub />
             </div>
-          )}
+          )} */}
         </div>
 
         <div

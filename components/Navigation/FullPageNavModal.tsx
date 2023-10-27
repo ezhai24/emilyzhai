@@ -1,5 +1,5 @@
+import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import { AnimatePresence, motion } from "framer-motion";
-import { IoClose } from "react-icons/io5";
 
 interface Props {
   isNavModalOpen: boolean;

@@ -1,6 +1,6 @@
+import { IoMenu } from "@react-icons/all-files/io5/IoMenu";
 import dynamic from "next/dynamic";
 import { useState } from "react";
-import { IoMenu } from "react-icons/io5";
 
 import { useViewport } from "@/hooks/useViewport";
 import { routes } from "@/utils/routes";
