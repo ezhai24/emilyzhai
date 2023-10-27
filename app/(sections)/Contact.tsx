@@ -1,32 +1,14 @@
+import { AiFillCodeSandboxCircle } from "@react-icons/all-files/ai/AiFillCodeSandboxCircle";
+import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub";
+import { AiFillLinkedin } from "@react-icons/all-files/ai/AiFillLinkedin";
+import { AiFillMediumSquare } from "@react-icons/all-files/ai/AiFillMediumSquare";
 import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useViewport } from "@/hooks/useViewport";
 import { clampRange } from "@/utils/math";
-
-const AiFillGithub = dynamic(() =>
-  import("@react-icons/all-files/ai/AiFillGithub").then(
-    (module) => module.AiFillGithub,
-  ),
-);
-const AiFillLinkedin = dynamic(() =>
-  import("@react-icons/all-files/ai/AiFillLinkedin").then(
-    (module) => module.AiFillLinkedin,
-  ),
-);
-const AiFillMediumSquare = dynamic(() =>
-  import("@react-icons/all-files/ai/AiFillMediumSquare").then(
-    (module) => module.AiFillMediumSquare,
-  ),
-);
-const AiFillCodeSandboxCircle = dynamic(() =>
-  import("@react-icons/all-files/ai/AiFillCodeSandboxCircle").then(
-    (module) => module.AiFillCodeSandboxCircle,
-  ),
-);
 
 export const Contact = () => {
   const { width } = useViewport();

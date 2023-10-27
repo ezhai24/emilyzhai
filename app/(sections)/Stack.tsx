@@ -1,47 +1,15 @@
+import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub";
+import { FaAws } from "@react-icons/all-files/fa/FaAws";
+import { FaReact } from "@react-icons/all-files/fa/FaReact";
+import { SiApollographql } from "@react-icons/all-files/si/SiApollographql";
+import { SiJest } from "@react-icons/all-files/si/SiJest";
+import { SiNextDotJs } from "@react-icons/all-files/si/SiNextDotJs";
+import { SiPostgresql } from "@react-icons/all-files/si/SiPostgresql";
+import { SiTailwindcss } from "@react-icons/all-files/si/SiTailwindcss";
+import { SiTypescript } from "@react-icons/all-files/si/SiTypescript";
 import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useState } from "react";
-
-const FaAws = dynamic(() =>
-  import("@react-icons/all-files/fa/FaAws").then((module) => module.FaAws),
-);
-const SiPostgresql = dynamic(() =>
-  import("@react-icons/all-files/si/SiPostgresql").then(
-    (module) => module.SiPostgresql,
-  ),
-);
-const SiTailwindcss = dynamic(() =>
-  import("@react-icons/all-files/si/SiTailwindcss").then(
-    (module) => module.SiTailwindcss,
-  ),
-);
-const SiTypescript = dynamic(() =>
-  import("@react-icons/all-files/si/SiTypescript").then(
-    (module) => module.SiTypescript,
-  ),
-);
-const AiFillGithub = dynamic(() =>
-  import("@react-icons/all-files/ai/AiFillGithub").then(
-    (module) => module.AiFillGithub,
-  ),
-);
-const FaReact = dynamic(() =>
-  import("@react-icons/all-files/fa/FaReact").then((module) => module.FaReact),
-);
-const SiApollographql = dynamic(() =>
-  import("@react-icons/all-files/si/SiApollographql").then(
-    (module) => module.SiApollographql,
-  ),
-);
-const SiJest = dynamic(() =>
-  import("@react-icons/all-files/si/SiJest").then((module) => module.SiJest),
-);
-const SiNextDotJs = dynamic(() =>
-  import("@react-icons/all-files/si/SiNextDotJs").then(
-    (module) => module.SiNextDotJs,
-  ),
-);
 
 type Tech = {
   label: string;
