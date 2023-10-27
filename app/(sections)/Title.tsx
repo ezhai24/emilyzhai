@@ -27,7 +27,7 @@ export const Title = () => {
   return (
     <section
       id="title"
-      className="bg-blue relative z-10 flex min-h-[90vh] items-center px-20 pt-24"
+      className="relative z-10 flex min-h-screen items-center bg-blue px-20 md:pt-24"
     >
       <div className="text-center">
         <h2 className="mb-4">EMILY ZHAI</h2>
@@ -39,7 +39,7 @@ export const Title = () => {
         <motion.button initial="default" whileHover="hover" className="mt-10">
           <div
             onClick={goToProjectSection}
-            className="font-kumbh-bold rounded-full border-2 px-4 py-1"
+            className="rounded-full border-2 px-4 py-1 font-kumbh-bold"
           >
             here&apos;s proof
           </div>
