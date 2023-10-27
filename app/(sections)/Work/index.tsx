@@ -1,8 +1,11 @@
+import { motion } from "framer-motion";
+import Image from "next/image";
+
 import { WorkCard, WorkType } from "./WorkCard";
 
-import { Drip } from "@/components/Drip";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useViewport } from "@/hooks/useViewport";
+import { clampRange } from "@/utils/math";
 
 const jobs: WorkType[] = [
   {
@@ -70,31 +73,38 @@ export const Work = () => {
 
   return (
     <section className="bg-gray relative z-10">
-      <Drip
+      <motion.picture
         animate={
           width >= 800
-            ? {
-                scaleX: -1,
-                scaleY: -1.05 + 3 * (scrollY - 0.35),
-              }
-            : { scaleX: -1, scaleY: Math.min(-0.1, -2 + 2.5 * scrollY) }
+            ? { scaleX: -1, scaleY: clampRange(scrollY, 0.3, 0.55, -1, -0.3) }
+            : { scaleX: -1, scaleY: clampRange(scrollY, 0.42, 0.6, -1, -0.3) }
         }
         transition={{ duration: 0 }}
-        fill="rgb(var(--color-gray))"
-        clipX={width >= 800 ? undefined : [30, 120]}
-        className="pointer-events-none absolute -top-40 -z-10 h-auto w-full md:-top-48"
-      />
-      <Drip
+        className="pointer-events-none absolute -top-[55%] -z-10 h-full w-screen -scale-x-100 -scale-y-50"
+      >
+        <source
+          type="image/svg+xml"
+          srcSet="assets/drip-gray.svg#svgView(viewBox(30,0,90,50.852077))"
+          media="(max-width: 799px)"
+        />
+        <Image src="assets/drip-gray.svg" alt="Drip texture" fill />
+      </motion.picture>
+      <motion.picture
         animate={
           width >= 800
-            ? { scaleY: Math.min(0.3 + 2 * (scrollY - 0.5), 0.9) }
-            : { scaleX: -1, scaleY: 0.1 + 4 * (scrollY - 0.5) }
+            ? { scaleY: clampRange(scrollY, 0.6, 0.84, 0.3, 0.9) }
+            : { scaleY: clampRange(scrollY, 0.62, 0.8, 0.3, 0.9) }
         }
         transition={{ duration: 0 }}
-        fill="rgb(var(--color-gray))"
-        clipX={width < 800 ? [30, 120] : undefined}
-        className="pointer-events-none absolute -bottom-40 -z-10 h-auto w-full md:-bottom-48"
-      />
+        className="scroll-y-50 pointer-events-none absolute -bottom-[55%] -z-10 h-full w-screen"
+      >
+        <source
+          type="image/svg+xml"
+          srcSet="assets/drip-gray.svg#svgView(viewBox(30,0,90,50.852077))"
+          media="(max-width: 799px)"
+        />
+        <Image src="assets/drip-gray.svg" alt="Drip texture" fill />
+      </motion.picture>
 
       <div className="relative w-screen overflow-x-hidden">
         <div className="absolute top-44 -z-10">

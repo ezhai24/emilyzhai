@@ -1,9 +1,11 @@
+import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
 
-import { Drip } from "@/components/Drip";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useViewport } from "@/hooks/useViewport";
+import { clampRange } from "@/utils/math";
 
 const BsGithub = dynamic(() =>
   import("react-icons/bs").then((module) => module.BsGithub),
@@ -24,16 +26,18 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="bg-blue relative z-10 py-14">
-      <Drip
+      <motion.picture
         animate={
           width >= 800
-            ? { scaleY: -1.2 + 2 * (scrollY - 0.8) }
-            : { scaleY: -1.75 + 5 * (scrollY - 0.8) }
+            ? { scaleY: clampRange(scrollY, 0.81, 1, -1.1, -0.8) }
+            : { scaleY: clampRange(scrollY, 0.87, 1, -1.1, -0.8) }
         }
         transition={{ duration: 0 }}
-        fill="rgb(var(--color-blue))"
-        className="pointer-events-none absolute -top-28 -z-10 h-auto w-screen md:-top-48"
-      />
+        className="pointer-events-none absolute -top-60 -z-10 h-full w-screen -scale-y-100 md:-top-52"
+      >
+        <Image src="assets/drip-blue.svg" alt="Drip texture" fill />
+      </motion.picture>
+
       <div className="mx-auto w-5/6">
         <h1>LET&apos;S TALK SHOP</h1>
         <div className="ml-2 flex items-center">

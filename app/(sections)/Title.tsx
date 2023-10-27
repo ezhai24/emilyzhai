@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FaChevronDown } from "react-icons/fa";
 
-import { Drip } from "@/components/Drip";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useViewport } from "@/hooks/useViewport";
+import { clampRange } from "@/utils/math";
 import { routes } from "@/utils/routes";
 
 export const Title = () => {
@@ -59,17 +60,22 @@ export const Title = () => {
         </motion.button>
       </div>
 
-      <Drip
+      <motion.picture
         animate={
           width >= 800
-            ? { scaleY: Math.min(0.5 + 2.5 * scrollY, 1.3) }
-            : { scaleY: Math.min(0.75 + 5 * scrollY, 1.8) }
+            ? { scaleY: clampRange(scrollY, 0, 0.29, 0.5, 1.25) }
+            : { scaleY: clampRange(scrollY, 0, 0.23, 0.5, 1.75) }
         }
         transition={{ duration: 0 }}
-        fill="rgb(var(--color-blue))"
-        clipX={width >= 800 ? undefined : [25, 130]}
-        className="pointer-events-none absolute -bottom-32 left-0 -z-10 h-auto w-screen md:-bottom-48"
-      />
+        className="pointer-events-none absolute -bottom-[55%] left-0 -z-10 h-full w-screen scale-y-50"
+      >
+        <source
+          type="image/svg+xml"
+          srcSet="assets/drip-blue.svg#svgView(viewBox(25,0,105,50.852077))"
+          media="(max-width: 799px)"
+        />
+        <Image src="assets/drip-blue.svg" alt="Drip texture" fill priority />
+      </motion.picture>
     </section>
   );
 };
