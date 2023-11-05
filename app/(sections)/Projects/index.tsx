@@ -29,7 +29,7 @@ const projects: DisplayedProject[] = [
   {
     name: "LOVE DEATH + ROBOTS",
     description:
-      "Advertisement for season 3 of the Netflix original - Love, Death, & Robots.",
+      "Teaser website for season 3 of the Netflix original - Love, Death, & Robots.",
     link: "https://love-death-robots.vercel.app/",
     githubLink: "https://github.com/ezhai24/love-death-robots",
     tags: ["3D Animation", "R3F", "Tailwind", "Typescript"],
@@ -82,8 +82,8 @@ export const Projects = () => {
           }}
           className="mx-auto mt-8 w-5/6 hover:cursor-pointer md:ml-[28%] md:w-1/3"
         >
-          <div className="bg-pink mx-auto h-4 w-[98%] rounded-t-lg" />
-          <div className="font-kumbh-bold mx-auto flex w-full items-center justify-center gap-0.5 border-y-4 bg-white py-2">
+          <div className="mx-auto h-4 w-[98%] rounded-t-lg bg-pink" />
+          <div className="mx-auto flex w-full items-center justify-center gap-0.5 border-y-4 bg-white py-2 font-kumbh-bold">
             project archive
             <motion.div
               variants={{
@@ -93,7 +93,7 @@ export const Projects = () => {
               <BsArrowUpRight />
             </motion.div>
           </div>
-          <div className="bg-pink mx-auto h-20 w-[98%] pt-8" />
+          <div className="mx-auto h-20 w-[98%] bg-pink pt-8" />
         </motion.div>
       </Link>
     </section>

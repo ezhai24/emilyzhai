@@ -8,6 +8,30 @@ export const projects = [
   },
   {
     year: 2023,
+    project: "Love Death + Robots",
+    description:
+      "Teaser website for season 3 of the Netflix original - Love, Death, & Robots.",
+    tech: ["3D Animation", "R3F", "Tailwind", "Typescript"],
+    link: "https://github.com/ezhai24/love-death-robots",
+  },
+  {
+    year: 2023,
+    project: "Minesweeper",
+    description:
+      "A nautical spin on Microsoft's 1990 hit classic, Minesweeper.",
+    tech: ["React Hooks", "Recursion", "CSS-in-JS", "Typescript"],
+    link: "https://github.com/ezhai24/minesweeper",
+  },
+  {
+    year: 2023,
+    project: "21W8Y",
+    description:
+      "The unofficial portfolio for Unsplash photographer Mateusz Delegacz.",
+    tech: ["REST API", "Framer Motion", "React", "Typescript"],
+    link: "https://github.com/ezhai24/21w8y",
+  },
+  {
+    year: 2023,
     project: "Infinite 3D Carousel",
     description:
       "An exploration into some of the core features of three.js and R3F.",
