@@ -1,5 +1,5 @@
+import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub";
 import { BsArrowUpRight } from "@react-icons/all-files/bs/BsArrowUpRight";
-// import { BsGithub } from "@react-icons/all-files/bs/BsGithub";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { CSSProperties, MouseEventHandler } from "react";
@@ -47,7 +47,7 @@ export const ProjectCard = (props: Props) => {
         <div
           className={`${
             hasLeftImage ? "flex-5" : "flex-1"
-          } bg-pink relative my-4 rounded-l-lg`}
+          } relative my-4 rounded-l-lg bg-pink`}
         >
           {hasLeftImage && image.component}
         </div>
@@ -73,20 +73,20 @@ export const ProjectCard = (props: Props) => {
               <Tag key={tag} label={tag} />
             ))}
           </ul>
-          {/* {githubLink && (
+          {githubLink && (
             <div
               onClick={openGHLink}
               className="mt-3 text-lg hover:cursor-pointer"
             >
-              <BsGithub />
+              <AiFillGithub />
             </div>
-          )} */}
+          )}
         </div>
 
         <div
           className={`${
             hasRightImage ? "flex-5" : "flex-1"
-          } bg-pink relative my-4 rounded-r-lg`}
+          } relative my-4 rounded-r-lg bg-pink`}
         >
           {hasRightImage && image.component}
         </div>
