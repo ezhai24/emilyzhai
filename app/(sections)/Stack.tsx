@@ -50,6 +50,7 @@ const coreStack: CoreTech[] = [
 
 const miscTech: Tech[] = [
   { label: "React Native", link: "https://reactnative.dev/" },
+  { label: "Stripe", link: "https://stripe.com/" },
   { label: "ESLint", link: "https://eslint.org/" },
   { label: "Prettier", link: "https://prettier.io/" },
   { label: "Framer Motion", link: "https://www.framer.com/motion/" },
@@ -59,6 +60,7 @@ const miscTech: Tech[] = [
 const tools: Tech[] = [
   { label: "Figma", link: "https://www.figma.com/" },
   { label: "Vercel", link: "https://www.vercel.com/" },
+  { label: "CircleCI", link: "https://circleci.com/" },
 ];
 
 export const Stack = () => {
@@ -94,7 +96,7 @@ export const Stack = () => {
                 hoveredTech.label === tech.label
                   ? "font-kumbh-bold"
                   : "font-normal"
-              } bg-pink mb-2 block rounded-xl py-4 text-center hover:cursor-pointer`}
+              } mb-2 block rounded-xl bg-pink py-4 text-center hover:cursor-pointer`}
             >
               {tech.label}
             </motion.div>

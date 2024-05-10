@@ -1,5 +1,31 @@
 export const projects = [
   {
+    year: 2024,
+    project: "Apple Pay Integration",
+    description: "The title kind of says it all on this one.",
+    company: "Foraged",
+    tech: ["React", "Stripe"],
+    link: "https://www.foraged.com/cart",
+  },
+  {
+    year: 2024,
+    project: "Local Order Pickup",
+    description:
+      "Vendor and customer tools for discovering and coordinating local order pickups.",
+    company: "Foraged",
+    tech: ["React", "Ionic", "Medusa"],
+    link: "https://apps.apple.com/us/app/foraged-market/id6444685145?platform=iphone",
+  },
+  {
+    year: 2024,
+    project: "Vendor Tools SaaS Tiering",
+    description:
+      "End to end feature gating and subscription management for Foraged vendor tools.",
+    company: "Foraged",
+    tech: ["React", "Stripe", "Medusa"],
+    link: "https://explore.foraged.com/sell/pricing-2/",
+  },
+  {
     year: 2023,
     project: "Portfolio v1",
     description: "Am I seeing double? You're looking at it!",

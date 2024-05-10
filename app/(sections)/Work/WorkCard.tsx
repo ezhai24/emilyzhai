@@ -41,7 +41,7 @@ export const WorkCard = (props: Props) => {
         <motion.div
           whileHover="hover"
           variants={{ hover: { y: 2, x: 2 } }}
-          className="bg-blue h-100 relative flex w-80 flex-col justify-center rounded-lg p-10 text-center"
+          className="relative flex h-100 w-80 flex-col justify-center rounded-lg bg-blue p-10 text-center"
         >
           <motion.span
             variants={{ hover: { y: -5, x: 5 } }}
@@ -53,7 +53,7 @@ export const WorkCard = (props: Props) => {
           <h2>{company}</h2>
           <h3>{role}</h3>
           <p className="mt-2">{description}</p>
-          <ul className="mb-3 mt-5 flex flex-wrap justify-center gap-3">
+          <ul className="mb-3 mt-5 flex flex-wrap justify-center gap-x-2 gap-y-1">
             {projectLinks?.map(({ label, href }) => (
               <li
                 key={label}
@@ -78,7 +78,7 @@ export const WorkCard = (props: Props) => {
         </motion.div>
       </Link>
 
-      <div className="h-100 absolute left-4 top-4 -z-10 w-80 rounded-lg bg-black p-10" />
+      <div className="absolute left-4 top-4 -z-10 h-100 w-80 rounded-lg bg-black p-10" />
     </div>
   );
 };

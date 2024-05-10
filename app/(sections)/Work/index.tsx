@@ -9,6 +9,29 @@ import { clampRange } from "@/utils/math";
 
 const jobs: WorkType[] = [
   {
+    dates: "2023-2024",
+    company: "FORAGED",
+    role: "Senior Software Engineer",
+    description:
+      "Grinded with a tiny team of 7 to ideate, architect, and launch GTV driving features on tight timelines. Created value for vendors and customers alike while increasing YoY revenue by over 3x.",
+    tags: ["React", "Stripe", "Ionic", "Medusa", "Typescript", "Tailwind"],
+    companyLink: "https://www.foraged.com/",
+    projectLinks: [
+      {
+        label: "SaaS Tiering",
+        href: "https://explore.foraged.com/sell/pricing-2/",
+      },
+      {
+        label: "Local Pickup",
+        href: "https://apps.apple.com/us/app/foraged-market/id6444685145?platform=iphone",
+      },
+      {
+        label: "Apple Pay",
+        href: "https://www.foraged.com/cart",
+      },
+    ],
+  },
+  {
     dates: "2020-2023",
     company: "CONVOY",
     role: "Senior Software Engineer",
@@ -105,16 +128,16 @@ export const Work = () => {
       <div className="relative w-screen overflow-x-hidden">
         <div className="absolute top-44 -z-10">
           <div className="clip -my-8 -ml-5 overflow-hidden whitespace-nowrap font-trailers text-9xl text-pink">
-            CONVOY PINTEREST LIMEADE LABKEY
+            FORAGED CONVOY PINTEREST LIMEADE LABKEY
           </div>
           <div className="clip -my-8 -ml-10 overflow-hidden whitespace-nowrap font-trailers text-9xl text-pink">
-            PINTEREST CONVOY LIMEADE LABKEY
+            PINTEREST CONVOY LIMEADE FORAGED LABKEY
           </div>
           <div className="clip -my-8 -ml-5 overflow-hidden whitespace-nowrap font-trailers text-9xl text-pink">
-            LIMEADE PINTEREST LABKEY CONVOY
+            LIMEADE FORAGED PINTEREST LABKEY CONVOY
           </div>
           <div className="clip -my-8 -ml-5 overflow-hidden whitespace-nowrap font-trailers text-9xl text-pink">
-            LABKEY LIMEADE CONVOY PINTEREST
+            LABKEY LIMEADE FORAGED CONVOY PINTEREST
           </div>
         </div>
 
