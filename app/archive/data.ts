@@ -45,7 +45,7 @@ export const projects = [
       "Real-time trailer insights dashboards for shippers and facilities.",
     company: "Convoy",
     tech: ["React", "GraphQL", "Kafka", "Postgres", "Typescript"],
-    link: "https://convoy.com/freight-services/supply-chain-visibility/",
+    link: "https://www.linkedin.com/posts/convoy-inc_introducing-hi-fi-visibility-convoy-activity-7028423068213526529-06Xl",
   },
   {
     year: 2021,
@@ -62,7 +62,6 @@ export const projects = [
       "Trailer inspection workflow for carriers. Generates actionable insights for 1.5k+ trailers.",
     company: "Convoy",
     tech: ["React Native", "S3", "GraphQL", "Postgres", "Typescript"],
-    link: "https://support.convoy.com/hc/en-us/articles/1500007914582-Power-Only-In-App-Inspections",
   },
   {
     year: 2020,

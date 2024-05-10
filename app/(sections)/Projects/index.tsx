@@ -16,7 +16,7 @@ const projects: DisplayedProject[] = [
     name: "HI-FI VISIBILITY",
     description:
       "Real-time trailer insights. Built to scale for 400k+ trailers across hundreds of shippers and facilities.",
-    link: "https://convoy.com/freight-services/supply-chain-visibility/",
+    link: "https://www.linkedin.com/posts/convoy-inc_introducing-hi-fi-visibility-convoy-activity-7028423068213526529-06Xl",
     tags: ["React", "GraphQL", "Kafka", "Postgres", "Typescript"],
     image: {
       component: (

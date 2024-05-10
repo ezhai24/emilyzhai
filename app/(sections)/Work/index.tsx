@@ -18,12 +18,8 @@ const jobs: WorkType[] = [
     companyLink: "https://convoy.com/",
     projectLinks: [
       {
-        label: "Hi-Fi",
-        href: "https://convoy.com/freight-services/supply-chain-visibility/",
-      },
-      {
-        label: "Inspections",
-        href: "https://support.convoy.com/hc/en-us/articles/1500007914582-Power-Only-In-App-Inspections",
+        label: "Hi-Fi Visibility",
+        href: "https://www.linkedin.com/posts/convoy-inc_introducing-hi-fi-visibility-convoy-activity-7028423068213526529-06Xl",
       },
     ],
   },
@@ -72,7 +68,7 @@ export const Work = () => {
   const { scrollY } = useScrollAnimation();
 
   return (
-    <section className="bg-gray relative z-10">
+    <section className="relative z-10 bg-gray">
       <motion.picture
         animate={
           width >= 800
@@ -108,16 +104,16 @@ export const Work = () => {
 
       <div className="relative w-screen overflow-x-hidden">
         <div className="absolute top-44 -z-10">
-          <div className="font-trailers text-pink clip -my-8 -ml-5 overflow-hidden whitespace-nowrap text-9xl">
+          <div className="clip -my-8 -ml-5 overflow-hidden whitespace-nowrap font-trailers text-9xl text-pink">
             CONVOY PINTEREST LIMEADE LABKEY
           </div>
-          <div className="font-trailers text-pink clip -my-8 -ml-10 overflow-hidden whitespace-nowrap text-9xl">
+          <div className="clip -my-8 -ml-10 overflow-hidden whitespace-nowrap font-trailers text-9xl text-pink">
             PINTEREST CONVOY LIMEADE LABKEY
           </div>
-          <div className="font-trailers text-pink clip -my-8 -ml-5 overflow-hidden whitespace-nowrap text-9xl">
+          <div className="clip -my-8 -ml-5 overflow-hidden whitespace-nowrap font-trailers text-9xl text-pink">
             LIMEADE PINTEREST LABKEY CONVOY
           </div>
-          <div className="font-trailers text-pink clip -my-8 -ml-5 overflow-hidden whitespace-nowrap text-9xl">
+          <div className="clip -my-8 -ml-5 overflow-hidden whitespace-nowrap font-trailers text-9xl text-pink">
             LABKEY LIMEADE CONVOY PINTEREST
           </div>
         </div>
